@@ -8,17 +8,11 @@ To POST data to WireMock server's REST endpoint, we can use curl or postman tool
 
 ## Start and Stop as Standalone Server to Mock Services
 
-* To Start, run this command from command prompt: 
-	
-	java -jar wiremock-1.57-standalone.jar --port 9999	
+* To Start, run this command from command prompt: 	java -jar wiremock-1.57-standalone.jar --port 9999	
 
-* To Stop, post a request with an empty body to this REST endpoint: 
+* To Stop, post a request with an empty body to this REST endpoint: http://localhost:9999/__admin/shutdown
 
-	http://localhost:9999/__admin/shutdown
-
-* To see what all service stubs exist on WireMock server, open admin console in browser: 
-
-	http://localhost:9999/__admin/
+* To see what all service stubs exist on WireMock server, open admin console in browser: http://localhost:9999/__admin/
 
 ## Manually Stubbing or Mocking REST services
 
@@ -26,33 +20,33 @@ A core feature of WireMock is the ability to return canned HTTP responses for re
 
 * Post a stub mapping via the JSON API to this REST endpoint (not persisted, so will lose this after restarting server): http://localhost:9999/__admin/mappings/new
 
-	{ 
-		"request": { 
-			"url": "/test", 
-			"method": "GET" 
-		}, 
-		"response": { 
-			"status": 200,
-			"headers": {
-						"Content-Type": "text/plain",
-						"Cache-Control": "no-cache"
-			},				
-			"body": "Hello World /n" 
+		{ 
+			"request": { 
+				"url": "/test", 
+				"method": "GET" 
+			}, 
+			"response": { 
+				"status": 200,
+				"headers": {
+							"Content-Type": "text/plain",
+							"Cache-Control": "no-cache"
+				},				
+				"body": "Hello World /n" 
+			}
 		}
-	}
-	
-	or
-	
-	{
-		"request": {
-			"method": "GET",
-			"url": "/body-file"
-		},
-		"response": {
-			"status": 200,
-			"bodyFileName": "path/to/filename.xml"
+		
+		or
+		
+		{
+			"request": {
+				"method": "GET",
+				"url": "/body-file"
+			},
+			"response": {
+				"status": 200,
+				"bodyFileName": "path/to/filename.xml"
+			}
 		}
-	}
 
 * Stub mappings which have been created can be persisted to the mappings directory via posting a request with an empty body to this REST endpoint: http://localhost:9999/__admin/mappings/save
 
@@ -66,9 +60,7 @@ A core feature of WireMock is the ability to return canned HTTP responses for re
 
 WireMock has the ability to create stub mappings by recording them while you send requests. This can be used to quickly capture a collection of responses from a real service then use them offline in your tests.
 
-* To record stub mappings of real web service, run this command: 
-
-	java -jar wiremock-1.57-standalone.jar --proxy-all="<real-rest-service-endpoint>" --port="9999" --record-mappings
+* To record stub mappings of real web service, run this command: java -jar wiremock-1.57-standalone.jar --proxy-all="<real-rest-service-endpoint>" --port="9999" --record-mappings
 
 * Access real services via WireMock server: http://localhost:9999/
 
@@ -100,4 +92,4 @@ Open following URLs in browser to see REST service response,
 	
 ## Disclaimer
 
-All [TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION](https://github.com/tomakehurst/wiremock/blob/master/LICENSE.txt) of the WireMock remains as per its license.
+All [TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION](https://github.com/tomakehurst/wiremock/blob/master/LICENSE.txt) of the WireMock remains the same as per its original license.
