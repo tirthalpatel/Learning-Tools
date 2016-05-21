@@ -1,0 +1,11 @@
+{
+  "priority" : 10,
+  "request" : {
+    "urlPath" : "/employees",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 401,
+    "body" : "Either URL pattern is incorrect or User doesn't exist for this REST request. Please contact administrator, if you need further support."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "request" : {
+    "url" : "/users/tirthalpatel",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-users-tirthalpatel-MlHvu.json",
+    "headers" : {
+      "Server" : "GitHub.com",
+      "Date" : "Thu, 19 May 2016 10:54:39 GMT",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Transfer-Encoding" : "chunked",
+      "Status" : "200 OK",
+      "X-RateLimit-Limit" : "60",
+      "X-RateLimit-Remaining" : "43",
+      "X-RateLimit-Reset" : "1463656375",
+      "Cache-Control" : "public, max-age=60, s-maxage=60",
+      "Vary" : [ "Accept", "Accept-Encoding" ],
+      "ETag" : "W/\"343ac4fc3c6d4e883b1d0b6c740cf6a7\"",
+      "Last-Modified" : "Thu, 17 Mar 2016 05:44:54 GMT",
+      "X-GitHub-Media-Type" : "github.v3",
+      "Access-Control-Expose-Headers" : "ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval",
+      "Access-Control-Allow-Origin" : "*",
+      "Content-Security-Policy" : "default-src 'none'",
+      "Strict-Transport-Security" : "max-age=31536000; includeSubdomains; preload",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Frame-Options" : "deny",
+      "X-XSS-Protection" : "1; mode=block",
+      "X-Served-By" : "52437fedc85beec8da3449496900fb9a",
+      "Content-Encoding" : "gzip",
+      "X-GitHub-Request-Id" : "79F2280A:B215:A3F0CFC:573D9B6E"
+    }
+  }
+}
