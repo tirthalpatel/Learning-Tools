@@ -1,0 +1,14 @@
+{
+  "priority" : 1,
+  "request" : {
+    "url" : "/images/koala",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "images/koala.jpg",
+    "headers" : {
+      "Content-Type" : "image"      
+    }
+  }
+}

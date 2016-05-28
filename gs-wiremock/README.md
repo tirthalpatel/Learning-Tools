@@ -6,15 +6,15 @@ Best part is that, the [WireMock server can be run in its own process](http://wi
 
 To POST data to WireMock server's REST endpoint, we can use curl or postman tool or any other choice of tool.
 
-## Start and Stop as Standalone Server to Mock Services
+## Start and Stop as Standalone HTTP Server for Stubbing Services
 
-* To Start, run this command from command prompt: 	java -jar wiremock-1.57-standalone.jar --port 9999	
+* To Start, run this command from command prompt: 	java -jar wiremock-1.57-standalone.jar --port 9999	--verbose true
 
 * To Stop, post a request with an empty body to this REST endpoint: http://localhost:9999/__admin/shutdown
 
 * To see what all service stubs exist on WireMock server, open admin console in browser: http://localhost:9999/__admin/
 
-## Manually Stubbing or Mocking REST services
+## Manually Stubbing REST services
 
 A core feature of WireMock is the ability to return canned HTTP responses for requests matching criteria. These criteria can be defined in terms of URL, headers and body content.
 
@@ -83,6 +83,7 @@ Open following URLs in browser to see REST service response,
 * http://localhost:9999/employees/
 * http://localhost:9999/employees/1000
 * http://localhost:9999/employees/search?name=invalid
+* http://localhost:9999/images/koala
 * http://localhost:9999/users/tirthalpatel - This returns recorded response of Github API
 		
 ## More Configuration Options?
