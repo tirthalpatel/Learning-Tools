@@ -6,6 +6,8 @@ Best part is that, the [WireMock server can be run in its own process](http://wi
 
 To POST data to WireMock server's REST endpoint, we can use curl or postman tool or any other choice of tool.
 
+Read related blog post [here](http://tirthalpatel.blogspot.com/2017/04/wiremock-standalone-http-server-for-service-virtualization.html)
+
 ## Start and Stop as Standalone HTTP Server for Stubbing Services
 
 * To Start, run this command from command prompt: 	java -jar wiremock-1.57-standalone.jar --port 9999	--verbose true
@@ -40,6 +42,22 @@ A core feature of WireMock is the ability to return canned HTTP responses for re
 		{
 			"request": {
 				"method": "GET",
+				"url": "/json-test"
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+							"Content-Type": "application/json"							
+				},
+				"jsonBody": {"status":"Success", "message":"Hello World"}
+			}
+		}
+		
+		or
+		
+		{
+			"request": {
+				"method": "GET",
 				"url": "/body-file"
 			},
 			"response": {
@@ -52,7 +70,7 @@ A core feature of WireMock is the ability to return canned HTTP responses for re
 
 * Open admin console in browser to validate the added stub mappings: http://localhost:9999/__admin/
 
-* Access mock REST services in browser: http://localhost:9999/test		
+* Access mock REST services in browser: http://localhost:9999/test / http://localhost:9999/json-test		
 
 * To reset all mock request url mapping and response data, just delete all files from "mappings" and "__files" folders.
 
